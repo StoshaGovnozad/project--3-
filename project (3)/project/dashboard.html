@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель управления - НАЕ-банк</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/animations.css">
+    <link rel="stylesheet" href="static/css/dashboard.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="dashboard-page">
+    <!-- Header -->
+    <header class="dashboard-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <span class="logo-text">НАЕ-банк</span>
+                </a>
+                
+                <div class="header-actions">
+                    <button class="header-btn" title="Настройки">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                    <button class="header-btn" title="Выйти" onclick="logout()">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <div class="container">
+            <!-- Welcome Section -->
+            <div class="welcome-section">
+                <h1 class="dashboard-title">Добро пожаловать в панель управления</h1>
+                <p class="dashboard-subtitle">Управляйте своими платежами и отслеживайте статистику</p>
+            </div>
+
+            <!-- Period Selector -->
+            <div class="period-selector">
+                <button class="period-btn active" data-period="24h">24 часа</button>
+                <button class="period-btn" data-period="7d">7 дней</button>
+                <button class="period-btn" data-period="30d">30 дней</button>
+                <button class="period-btn" data-period="90d">90 дней</button>
+                <button class="period-btn" data-period="1y">1 год</button>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-icon green">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <button class="balance-toggle" id="balanceToggle">
+                            <i class="fas fa-eye" id="balanceIcon"></i>
+                        </button>
+                    </div>
+                    <h3 class="stat-title">Общий баланс</h3>
+                    <div class="stat-value" id="balanceValue">₽2,450,000</div>
+                    <div class="stat-change positive">+12.5%</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-icon blue">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <h3 class="stat-title">Транзакции</h3>
+                    <div class="stat-value">1,247</div>
+                    <div class="stat-change positive">+8.2%</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-icon purple">
+                            <i class="fas fa-users"></i>
+                        </div>
+                    </div>
+                    <h3 class="stat-title">Активные клиенты</h3>
+                    <div class="stat-value">89</div>
+                    <div class="stat-change positive">+15.3%</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-icon orange">
+                            <i class="fas fa-percentage"></i>
+                        </div>
+                    </div>
+                    <h3 class="stat-title">Конверсия</h3>
+                    <div class="stat-value">94.2%</div>
+                    <div class="stat-change positive">+2.1%</div>
+                </div>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="dashboard-grid">
+                <!-- Chart Section -->
+                <div class="chart-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Статистика платежей</h2>
+                        <button class="export-btn">
+                            <i class="fas fa-download"></i>
+                            Экспорт
+                        </button>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="paymentsChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Transactions Section -->
+                <div class="transactions-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Последние транзакции</h2>
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="transactions-list" id="transactionsList">
+                        <!-- Transactions will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="static/js/dashboard.js"></script>
+</body>
+</html>

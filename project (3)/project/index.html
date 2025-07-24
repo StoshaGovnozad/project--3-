@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>НАЕ-банк - Современная платёжная система</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/animations.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-fire"></i>
+                        <div class="glow-effect"></div>
+                    </div>
+                    <span class="logo-text">НАЕ-банк</span>
+                </a>
+                
+                <nav class="nav desktop-nav">
+                    <a href="#home" class="nav-link">Главная</a>
+                    <a href="#services" class="nav-link">Услуги</a>
+                    <a href="#about" class="nav-link">О нас</a>
+                    <a href="#contact" class="nav-link">Контакты</a>
+                    <a href="login.html" class="btn btn-primary">Войти</a>
+                </nav>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="#home" class="mobile-nav-link">Главная</a>
+                <a href="#services" class="mobile-nav-link">Услуги</a>
+                <a href="#about" class="mobile-nav-link">О нас</a>
+                <a href="#contact" class="mobile-nav-link">Контакты</a>
+                <a href="login.html" class="btn btn-primary">Войти</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="floating-element floating-1"></div>
+            <div class="floating-element floating-2"></div>
+            <div class="floating-element floating-3"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text animate-gradient">НАЕ-банк</span>
+                    <br>
+                    <span class="hero-subtitle">Платёжная система будущего</span>
+                </h1>
+                
+                <p class="hero-description">
+                    Безопасные платежи по СБП и криптовалютам. 
+                    Работаем по всему миру с соблюдением международных стандартов безопасности.
+                </p>
+                
+                <div class="hero-features">
+                    <div class="feature-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Безопасность</span>
+                    </div>
+                    <div class="feature-badge">
+                        <i class="fas fa-bolt"></i>
+                        <span>Мгновенные переводы</span>
+                    </div>
+                    <div class="feature-badge">
+                        <i class="fas fa-globe"></i>
+                        <span>Глобальная сеть</span>
+                    </div>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="login.html" class="btn btn-primary btn-large">
+                        <span>Начать работу</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <button class="btn btn-secondary btn-large">Узнать больше</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Наши услуги</h2>
+                <p class="section-description">Полный спектр платёжных решений для вашего бизнеса</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-color="blue">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="service-title">СБП Платежи</h3>
+                    <p class="service-description">Мгновенные переводы через Систему быстрых платежей с минимальными комиссиями</p>
+                </div>
+                
+                <div class="service-card" data-color="orange">
+                    <div class="service-icon">
+                        <i class="fab fa-bitcoin"></i>
+                    </div>
+                    <h3 class="service-title">Криптовалюты</h3>
+                    <p class="service-description">Поддержка Bitcoin, Ethereum, USDT и других популярных криптовалют</p>
+                </div>
+                
+                <div class="service-card" data-color="purple">
+                    <div class="service-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3 class="service-title">Банковские карты</h3>
+                    <p class="service-description">Прием платежей с карт Visa, MasterCard, МИР по всему миру</p>
+                </div>
+                
+                <div class="service-card" data-color="green">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="service-title">Безопасность</h3>
+                    <p class="service-description">Многоуровневая защита данных и соблюдение международных стандартов</p>
+                </div>
+                
+                <div class="service-card" data-color="red">
+                    <div class="service-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="service-title">Быстрые выплаты</h3>
+                    <p class="service-description">Автоматические выплаты на ваши счета в режиме реального времени</p>
+                </div>
+                
+                <div class="service-card" data-color="indigo">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="service-title">Глобальная сеть</h3>
+                    <p class="service-description">Работаем в 150+ странах мира с поддержкой местных валют</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Наши достижения</h2>
+                <p class="section-description">Цифры, которые говорят о нашей надёжности</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon green">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="stat-value" data-target="2500000">0</div>
+                    <div class="stat-label">Транзакций обработано</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon blue">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-value" data-target="150000">0</div>
+                    <div class="stat-label">Активных пользователей</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon orange">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="stat-value" data-target="850" data-prefix="$" data-suffix="M">$0M</div>
+                    <div class="stat-label">Объём платежей</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon purple">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="stat-value" data-target="150">0</div>
+                    <div class="stat-label">Стран покрытия</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="index.html" class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <span class="logo-text">НАЕ-банк</span>
+                    </a>
+                    <p class="footer-description">
+                        Современная платёжная система, обеспечивающая безопасные и быстрые переводы по всему миру.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Быстрые ссылки</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#services">Услуги</a></li>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="login.html">Войти</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Контакты</h3>
+                    <ul class="footer-contacts">
+                        <li><i class="fas fa-envelope"></i> support@nae-bank.com</li>
+                        <li><i class="fas fa-phone"></i> +7 (800) 123-45-67</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Москва, Россия</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 НАЕ-банк. Все права защищены. Лицензия ЦБ РФ №123456</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="static/js/main.js"></script>
+</body>
+</html>

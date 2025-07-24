@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход - НАЕ-банк</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/animations.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <!-- Background effects -->
+        <div class="login-bg">
+            <div class="floating-element floating-1"></div>
+            <div class="floating-element floating-2"></div>
+            <div class="floating-element floating-3"></div>
+        </div>
+        
+        <div class="login-content">
+            <!-- Logo -->
+            <div class="login-logo">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-fire"></i>
+                        <div class="glow-effect"></div>
+                    </div>
+                    <span class="logo-text">НАЕ-банк</span>
+                </a>
+            </div>
+            
+            <!-- Login Form -->
+            <div class="login-card">
+                <h2 class="login-title">Вход в систему</h2>
+                
+                <form class="login-form" id="loginForm">
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email адрес</label>
+                        <input type="email" id="email" class="form-input" placeholder="your@email.com" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-telegram" id="telegramBtn">
+                        <i class="fab fa-telegram"></i>
+                        <span>Войти через Telegram</span>
+                        <div class="loading-spinner" id="loadingSpinner"></div>
+                    </button>
+                    
+                    <p class="login-note">
+                        Регистрация происходит автоматически при первом входе
+                    </p>
+                </form>
+                
+                <!-- Features -->
+                <div class="login-features">
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Двухфакторная аутентификация</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-bolt"></i>
+                        <span>Мгновенный доступ к кабинету</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Back to home -->
+            <div class="back-link">
+                <a href="index.html">
+                    <i class="fas fa-arrow-left"></i>
+                    Вернуться на главную
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="static/js/login.js"></script>
+</body>
+</html>
