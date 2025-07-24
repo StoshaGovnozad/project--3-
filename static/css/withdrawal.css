@@ -1,0 +1,629 @@
+/* Withdrawal Page Styles */
+.page-header {
+    margin-bottom: 32px;
+}
+
+.page-nav {
+    margin-bottom: 16px;
+}
+
+.nav-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.nav-back:hover {
+    color: #ffffff;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #f97316, #dc2626);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.page-subtitle {
+    color: #94a3b8;
+    font-size: 1.1rem;
+}
+
+/* Balance Info */
+.balance-info {
+    margin-bottom: 40px;
+}
+
+.balance-card {
+    background: rgba(30, 41, 59, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.balance-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.balance-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #10b981, #34d399);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+}
+
+.balance-header h3 {
+    color: #94a3b8;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.balance-amount {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.balance-note {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* Withdrawal Form */
+.withdrawal-form-container {
+    background: rgba(30, 41, 59, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 40px;
+}
+
+.form-section {
+    margin-bottom: 32px;
+}
+
+.form-section:last-child {
+    margin-bottom: 0;
+}
+
+.section-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Method Selection */
+.method-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+}
+
+.method-card {
+    background: rgba(51, 65, 85, 0.3);
+    border: 2px solid #475569;
+    border-radius: 12px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.method-card:hover {
+    border-color: #64748b;
+    transform: translateY(-2px);
+}
+
+.method-card.selected {
+    border-color: #f97316;
+    background: rgba(249, 115, 22, 0.1);
+}
+
+.method-card.selected::before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 20px;
+    height: 20px;
+    background: #f97316;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.method-card.selected::after {
+    content: '✓';
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 20px;
+    height: 20px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.method-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.method-card[data-method="sbp"] .method-icon {
+    background: linear-gradient(135deg, #10b981, #34d399);
+}
+
+.method-card[data-method="card"] .method-icon {
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+}
+
+.method-card[data-method="crypto"] .method-icon {
+    background: linear-gradient(135deg, #f97316, #fbbf24);
+}
+
+.method-card[data-method="bank"] .method-icon {
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+}
+
+.method-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.method-description {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.method-features {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.feature-tag {
+    background: rgba(71, 85, 105, 0.5);
+    color: #cbd5e1;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Amount Input */
+.amount-input-container {
+    max-width: 500px;
+}
+
+.amount-input-wrapper {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.amount-input {
+    width: 100%;
+    padding: 16px 24px;
+    padding-right: 50px;
+    background: rgba(51, 65, 85, 0.5);
+    border: 2px solid #475569;
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.amount-input:focus {
+    outline: none;
+    border-color: #f97316;
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+}
+
+.currency-symbol {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    font-size: 20px;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.quick-amounts {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.quick-amount-btn {
+    padding: 8px 16px;
+    background: rgba(51, 65, 85, 0.5);
+    border: 1px solid #475569;
+    border-radius: 6px;
+    color: #cbd5e1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.quick-amount-btn:hover {
+    background: rgba(71, 85, 105, 0.8);
+    color: #ffffff;
+}
+
+.quick-amount-btn.active {
+    background: linear-gradient(135deg, #f97316, #dc2626);
+    border-color: #f97316;
+    color: white;
+}
+
+/* Method Details */
+.method-details {
+    border-top: 1px solid #334155;
+    padding-top: 32px;
+}
+
+.method-form {
+    animation: fadeInUp 0.3s ease-out;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-label {
+    display: block;
+    color: #d1d5db;
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.form-input,
+.form-select {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(51, 65, 85, 0.5);
+    border: 1px solid #475569;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus,
+.form-select:focus {
+    outline: none;
+    border-color: #f97316;
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+}
+
+.form-input::placeholder {
+    color: #94a3b8;
+}
+
+.form-select option {
+    background: #1e293b;
+    color: #ffffff;
+}
+
+/* Fee Information */
+.fee-info {
+    margin-top: 24px;
+    animation: fadeInUp 0.3s ease-out;
+}
+
+.fee-card {
+    background: rgba(51, 65, 85, 0.3);
+    border: 1px solid #475569;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.fee-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.fee-row:last-child {
+    margin-bottom: 0;
+}
+
+.fee-row.total {
+    border-top: 1px solid #475569;
+    padding-top: 12px;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.fee-label {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.fee-value {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.fee-row.total .fee-label,
+.fee-row.total .fee-value {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+/* Form Actions */
+.form-actions {
+    margin-top: 32px;
+    text-align: center;
+}
+
+.form-actions .btn {
+    min-width: 250px;
+    position: relative;
+}
+
+.form-actions .btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.form-actions .btn:disabled:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.loading-spinner {
+    display: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid transparent;
+    border-top: 2px solid currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-left: 8px;
+}
+
+/* Recent Withdrawals */
+.recent-withdrawals {
+    background: rgba(30, 41, 59, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.recent-withdrawals .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.view-all-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #f97316;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.view-all-link:hover {
+    color: #fb923c;
+}
+
+.withdrawals-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.withdrawal-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background: rgba(51, 65, 85, 0.3);
+    border: 1px solid #475569;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.withdrawal-item:hover {
+    border-color: #64748b;
+}
+
+.withdrawal-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.withdrawal-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: white;
+}
+
+.withdrawal-icon.sbp {
+    background: linear-gradient(135deg, #10b981, #34d399);
+}
+
+.withdrawal-icon.card {
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+}
+
+.withdrawal-icon.crypto {
+    background: linear-gradient(135deg, #f97316, #fbbf24);
+}
+
+.withdrawal-icon.bank {
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+}
+
+.withdrawal-details h4 {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.withdrawal-details p {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+.withdrawal-amount {
+    text-align: right;
+}
+
+.withdrawal-amount .amount {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: #ef4444;
+}
+
+.withdrawal-amount .status {
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.withdrawal-amount .status.completed {
+    background: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+}
+
+.withdrawal-amount .status.pending {
+    background: rgba(251, 191, 36, 0.2);
+    color: #fbbf24;
+}
+
+.withdrawal-amount .status.processing {
+    background: rgba(59, 130, 246, 0.2);
+    color: #3b82f6;
+}
+
+.withdrawal-amount .status.failed {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .method-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .quick-amounts {
+        justify-content: center;
+    }
+    
+    .withdrawal-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .withdrawal-amount {
+        text-align: left;
+        width: 100%;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .balance-amount {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .withdrawal-form-container,
+    .recent-withdrawals {
+        padding: 20px;
+    }
+    
+    .balance-card {
+        padding: 20px;
+    }
+    
+    .amount-input {
+        font-size: 20px;
+        padding: 14px 20px;
+    }
+    
+    .method-card {
+        padding: 16px;
+    }
+    
+    .form-actions .btn {
+        min-width: 200px;
+    }
+}

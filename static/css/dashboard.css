@@ -1,0 +1,31 @@
+@@ .. @@
+ .stat-change.negative::before {
+     border-left: 4px solid transparent;
+     border-right: 4px solid transparent;
+     border-top: 6px solid #ef4444;
+ }
+ 
++.balance-actions {
++    margin-top: 16px;
++}
++
++.balance-action-btn {
++    display: inline-flex;
++    align-items: center;
++    gap: 8px;
++    padding: 8px 16px;
++    background: linear-gradient(135deg, #f97316, #dc2626);
++    color: white;
++    text-decoration: none;
++    border-radius: 6px;
++    font-size: 14px;
++    font-weight: 500;
++    transition: all 0.3s ease;
++}
++
++.balance-action-btn:hover {
++    transform: translateY(-2px);
++    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
++}
++
+ /* Dashboard Grid */
